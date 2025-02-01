@@ -1,5 +1,5 @@
 {
-  "name": "astroad",
+  "name": "astroad-cms",
   "description": "Astroad - Payload",
   "version": "1.1",
   "main": "dist/server.js",
@@ -10,7 +10,8 @@
     "build:server": "tsc",
     "build": "yarn build:payload && yarn build:server",
     "serve": "cross-env PAYLOAD_CONFIG_PATH=dist/payload.config.js node -r tsconfig-paths/register dist/server.js",
-    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts node -r tsconfig-paths/register node_modules/payload/dist/bin/index.js generate:types"
+    "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts node -r tsconfig-paths/register node_modules/payload/dist/bin/index.js generate:types",
+    "netlify:build": "yarn build"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
